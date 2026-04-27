@@ -19,7 +19,7 @@ app.use(
 app.use(express.json());
 
 app.use("/battle", battleRouter);
-app.use("/leaderboard");
+app.use("/leaderboard", () => {});
 
 app.use("*splat", () => {});
 // app.use(errorHandler)
