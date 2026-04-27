@@ -1,4 +1,5 @@
 import { CLIENT_BASE_URL, PORT } from "#config";
+import { battleRouter } from "#routes";
 import cors from "cors";
 import express from "express";
 
@@ -17,7 +18,7 @@ app.use(
 
 app.use(express.json());
 
-// app.use('/battle', battleRouter)
+app.use("/battle", battleRouter);
 app.use("/leaderboard");
 
 app.use("*splat", () => {});
